@@ -40,7 +40,7 @@
 1. 本地运行
    ```bash
    # 克隆项目
-   git clone [项目地址]
+   git clone git@github.com:akcshen/xinxiaowl.git
 
    # 进入项目目录
    cd xinxiaowl
