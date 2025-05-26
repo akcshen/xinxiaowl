@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>信霄网络 - 专业网络服务提供商</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+        .service-card {
+            transition: transform 0.3s;
+            margin-bottom: 20px;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        .contact-section {
+            background-color: #f8f9fa;
+        }
+        /* 导航栏样式优化 */
+        .navbar {
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        .navbar-brand {
+            font-size: 1.5rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+        }
+        .nav-link {
+            font-size: 1.1rem;
+            padding: 0.5rem 1.2rem !important;
+            margin: 0 0.3rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: #fff;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        .nav-link:hover::after {
+            width: 80%;
+        }
+        .navbar-toggler {
+            border: none;
+            padding: 0.5rem;
+        }
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                background: rgba(33, 37, 41, 0.95);
+                padding: 1rem;
+                border-radius: 0.5rem;
+                margin-top: 1rem;
+            }
+            .nav-link {
+                padding: 0.8rem 1rem !important;
+                margin: 0.3rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">信霄网络</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">关于我们</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">服务内容</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">联系我们</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 首页横幅 -->
+    <section id="home" class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 mb-4">信霄网络</h1>
+            <p class="lead">专业的网络服务解决方案提供商</p>
+            <a href="#contact" class="btn btn-primary btn-lg">联系我们</a>
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">关于我们</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="lead">信霄网络是一家专注于提供高质量网络服务的科技公司。我们致力于为客户提供最优质的网络解决方案。</p>
+                    <p>我们的团队由经验丰富的专业人士组成，确保为客户提供最专业的服务。</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" class="img-fluid rounded" alt="团队照片">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 服务内容 -->
+    <section id="services" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">服务内容</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card service-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-globe display-4 mb-3"></i>
+                            <h3 class="card-title">网络建设</h3>
+                            <p class="card-text">提供专业的网络基础设施建设和维护服务。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card service-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-shield-check display-4 mb-3"></i>
+                            <h3 class="card-title">网络安全</h3>
+                            <p class="card-text">全方位的网络安全解决方案，保护您的数据安全。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card service-card">
+                        <div class="card-body text-center">
+                            <i class="bi bi-cloud display-4 mb-3"></i>
+                            <h3 class="card-title">云服务</h3>
+                            <p class="card-text">提供稳定可靠的云计算服务解决方案。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-5 contact-section">
+        <div class="container">
+            <h2 class="text-center mb-5">联系我们</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form id="contactForm" onsubmit="sendEmail(event)">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="您的姓名" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="电子邮箱" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="message" rows="5" placeholder="请输入您的留言" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">发送消息</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="mt-4 mt-md-0">
+                        <h4>联系方式</h4>
+                        <p><i class="bi bi-geo-alt"></i> 地址：上海市松江区叶榭镇叶旺公路1号1楼</p>
+                        <!-- <p><i class="bi bi-telephone"></i> 电话：您的联系电话</p> -->
+                        <p><i class="bi bi-envelope"></i> 邮箱：xinxiaowl@163.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p>&copy; 2024 信霄网络. 保留所有权利.</p>
+            <p class="mb-0"><a href="https://beian.miit.gov.cn/" target="_blank" class="text-white text-decoration-none">沪ICP备2024075971号-7</a></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("YOUR_PUBLIC_KEY"); // 这里需要替换成您的EmailJS公钥
+        })();
+
+        function sendEmail(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (!name || !email || !message) {
+                alert('请填写所有必填字段！');
+                return;
+            }
+
+            const templateParams = {
+                from_name: name,
+                from_email: email,
+                message: message,
+                to_email: 'xinxiaowl@163.com'
+            };
+
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', templateParams)
+                .then(function(response) {
+                    alert('消息已发送！我们会尽快回复您。');
+                    document.getElementById('contactForm').reset();
+                }, function(error) {
+                    alert('发送失败，请稍后重试。');
+                });
+        }
+    </script>
+</body>
+</html>
