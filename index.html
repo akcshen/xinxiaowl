@@ -43,9 +43,9 @@
             <p class="text-xl text-white/90 mb-8">
                 支持抖音、快手、小红书、美团等全平台，智能剪辑，一键发布，助力商家实现指数级增长
             </p>
-            <button class="bg-white text-indigo-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition">
+            <a href="#contact" class="inline-block bg-white text-indigo-600 px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-100 transition">
                 免费试用
-            </button>
+            </a>
         </div>
     </section>
 
@@ -77,6 +77,15 @@
     <section id="pricing" class="py-20 bg-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-3xl font-bold text-center mb-12">价格方案</h2>
+            <div class="flex justify-center mb-8">
+                <div class="flex items-center space-x-2">
+                    <span class="text-gray-600">月付</span>
+                    <button id="priceToggle" class="w-14 h-7 bg-gray-200 rounded-full p-1 transition-colors duration-200">
+                        <div id="toggleDot" class="w-5 h-5 bg-white rounded-full transition-transform duration-200"></div>
+                    </button>
+                    <span class="text-gray-600">年付</span>
+                </div>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-white p-8 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold mb-4">体验版</h3>
@@ -147,7 +156,7 @@
     <footer class="bg-gray-800 text-white py-8">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-center items-center space-x-6">
-                <p>© 2024 好评派. 保留所有权利</p>
+                <p>© 2025 好评派. 保留所有权利</p>
                 <span class="text-gray-400">|</span>
                 <a href="mailto:xinxiaowl@163.com" class="text-gray-400 hover:text-white">xinxiaowl@163.com</a>
                 <span class="text-gray-400">|</span>
@@ -162,13 +171,15 @@
             const monthlyPrices = document.querySelectorAll('.monthly-price');
             const yearlyPrices = document.querySelectorAll('.yearly-price');
             
-            priceToggle.addEventListener('click', function() {
-                toggleDot.classList.toggle('translate-x-6');
-                priceToggle.classList.toggle('bg-indigo-600');
-                
-                monthlyPrices.forEach(price => price.classList.toggle('hidden'));
-                yearlyPrices.forEach(price => price.classList.toggle('hidden'));
-            });
+            if (priceToggle && toggleDot) {
+                priceToggle.addEventListener('click', function() {
+                    toggleDot.classList.toggle('translate-x-6');
+                    priceToggle.classList.toggle('bg-indigo-600');
+                    
+                    monthlyPrices.forEach(price => price.classList.toggle('hidden'));
+                    yearlyPrices.forEach(price => price.classList.toggle('hidden'));
+                });
+            }
         });
     </script>
 </body>
